@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const patname = usePathname();
-  console.log(patname.includes("doua"));
+  // console.log(patname.includes("doua"));
 
   const link = (
     <div className="flex lg:flex-row md:flex-col max-sm:flex-col space-x-2 text-[#487866] text-start">
