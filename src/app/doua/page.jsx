@@ -18,7 +18,7 @@ export default function Douapage() {
         setData(data);
       });
   }, []);
-  console.log(data);
+  console.log(data.length);
 
   if (!data) {
     return (
@@ -142,6 +142,10 @@ export default function Douapage() {
           </div>
         </div>
       </div>
+      <div className="w-9/12  mx-auto bg-[#F0F7F0] rounded-md my-5 card-body">
+      <h1 className="text-gray-700 font-bold text-lg">Islamic Duas</h1>
+        <div className=" text-[#40b540]">total {data.length} duas</div>
+      </div>
       <div className="grid grid-cols-12">
         <div className="hidden lg:block ">
           <div className="col-span-1 flex flex-col space-y-5 items-center bg-white mx-2 rounded-xl py-5 ">
@@ -155,17 +159,19 @@ export default function Douapage() {
         </div>
         <div className="col-span-9">
           <div></div>
-          <div>
+          <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 max-sm:grid-cols-1 gap-2 px-2 ">
             {data?.map((item, i) => (
               <div key={i}>
-                <div className="card-body">
-                  
-                </div>
+                <Link
+                  href={`doua/${item?.id}`}
+                  className="card-body border border-gray-600 rounded-md"
+                >
+                  {item?.dua_name_en}
+                </Link>
               </div>
             ))}
           </div>
         </div>
-        {/* <div className="col-span-7">Hello</div> */}
         <div className="col-span-2">
           <div className="space-y-3 hidden xl:block bg-white px-3 h-96 rounded-md">
             <h1 className="text-2xl font-bold text-center">Settings</h1>

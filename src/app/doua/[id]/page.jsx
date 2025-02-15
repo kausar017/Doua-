@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import React from "react";
 import { FaHome, FaSms } from "react-icons/fa";
@@ -7,9 +8,12 @@ import { BsBook, BsBookmark } from "react-icons/bs";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import { FiSettings } from "react-icons/fi";
-
+import { useParams } from "next/navigation";
 
 export default function DetalsPage() {
+  const id = useParams();
+  console.log(id);
+  
   const link = (
     <>
       <div className="btn btn-ghost hover:bg-transparent cursor-no-drop max-sm:hidden"></div>
