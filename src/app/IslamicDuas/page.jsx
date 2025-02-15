@@ -57,12 +57,3 @@ export default function IslamicDuas() {
   );
 }
 
-// {
-//   "_id": "67af49a5635366492e805508",
-//   "cat_id": 1,
-//   "cat_name_bn": "দোয়ার গুরুত্ব",
-//   "cat_name_en": "Dua's Importance",
-//   "no_of_subcat": 7,
-//   "no_of_dua": 21,
-//   "cat_icon": "duar_gurutto"
-// }

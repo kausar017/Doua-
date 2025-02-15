@@ -1,6 +1,5 @@
-"use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FaHome, FaSms } from "react-icons/fa";
 import { TfiLayoutGrid2 } from "react-icons/tfi";
 import { FaFont, FaJar, FaLanguage, FaLocationDot } from "react-icons/fa6";
@@ -9,25 +8,8 @@ import { FaHandHoldingHeart } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import { FiSettings } from "react-icons/fi";
 
-export default function Douapage() {
-  const [data, setData] = useState();
-  useEffect(() => {
-    fetch("http://localhost:9000/douas")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
-  console.log(data);
 
-  if (!data) {
-    return (
-      <div className="flex flex-col justify-center items-center min-h-screen">
-        <span className="loading loading-bars loading-lg"></span>
-      </div>
-    );
-  }
-
+export default function DetalsPage() {
   const link = (
     <>
       <div className="btn btn-ghost hover:bg-transparent cursor-no-drop max-sm:hidden"></div>
@@ -153,19 +135,8 @@ export default function Douapage() {
             {link}
           </div>
         </div>
-        <div className="col-span-9">
-          <div></div>
-          <div>
-            {data?.map((item, i) => (
-              <div key={i}>
-                <div className="card-body">
-                  
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* <div className="col-span-7">Hello</div> */}
+        <div className="col-span-2">Hello</div>
+        <div className="col-span-7">Hello</div>
         <div className="col-span-2">
           <div className="space-y-3 hidden xl:block bg-white px-3 h-96 rounded-md">
             <h1 className="text-2xl font-bold text-center">Settings</h1>
